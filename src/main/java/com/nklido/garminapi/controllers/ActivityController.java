@@ -3,6 +3,7 @@ package com.nklido.garminapi.controllers;
 import com.nklido.garminapi.responses.ActivityResponse;
 import com.nklido.garminapi.responses.GarminActivitiesResponse;
 import com.nklido.garminapi.services.GarminService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,11 @@ public class ActivityController {
 
     @GetMapping("/activities")
     public ResponseEntity<List<ActivityResponse>> get() {
-        return garminService.getActivities();
+
+        return new ResponseEntity<>(
+            garminService.getActivities(),
+            HttpStatus.OK
+        );
     }
 
     @GetMapping("/activitiesRaw")

@@ -21,9 +21,7 @@ import java.util.List;
 @Service
 public class GarminService {
 
-    @Value("https://connect.garmin.com")
-    private String garminBaseUrl;
-
+    private final String garminBaseUrl = "https://connect.garmin.com";
 
     private static final Logger logger = LoggerFactory.getLogger(GarminService.class);
 
@@ -57,8 +55,6 @@ public class GarminService {
 
         ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class);
 
-
-
         logResponse(responseEntity);
 
         return responseEntity;
@@ -72,7 +68,7 @@ public class GarminService {
         logger.info("Response Body: {}", responseEntity.getBody());
     }
 
-    public ResponseEntity<List<ActivityResponse>> getActivities(){
+    public List<ActivityResponse> getActivities(){
         RestTemplate restTemplate = new RestTemplate();
 
         String url = UriComponentsBuilder.fromHttpUrl(garminBaseUrl + ACTIVITIES_ENDPOINT)
@@ -91,14 +87,10 @@ public class GarminService {
 
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(new LinkedMultiValueMap<>(), headers);
 
-
         ResponseEntity<GarminActivitiesResponse> responseEntity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, GarminActivitiesResponse.class);
 
         GarminActivitiesResponse garminActivitiesResponse = responseEntity.getBody();
 
-        return new ResponseEntity<>(
-            garminActivityResponseConverter.convert(garminActivitiesResponse),
-            HttpStatus.OK
-        );
+        return garminActivityResponseConverter.convert(garminActivitiesResponse);
     }
 }
