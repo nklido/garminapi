@@ -1,20 +1,19 @@
-package com.nklido.garminapi.adapter.garmin.dto;
+package com.nklido.garminapi.core.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ActivityDto {
-    @JsonProperty("activityId")
-    private long activityId;
+public class Activity {
 
-    @JsonProperty("activityName")
-    private String activityName;
+    @JsonProperty("id")
+    private long id;
+
+    @JsonProperty("name")
+    private String name;
 
     @JsonProperty("startTimeLocal")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -27,26 +26,20 @@ public class ActivityDto {
     @JsonProperty("duration")
     private double duration;
 
-    @JsonProperty("elapsedDuration")
-    private Double elapsedDuration;
-
-    @JsonProperty("movingDuration")
-    private Double movingDuration;
-
     @JsonProperty("distance")
     private double distance;
 
     @JsonProperty("averageSpeed")
     private Double averageSpeed;
 
+    @JsonProperty("averagePace")
+    private String averagePace;
+
     @JsonProperty("activityType")
-    private ActivityTypeDto activityType;
+    private ActivityType activityType;
 
     @JsonProperty("averageHR")
     private Double averageHR;
-
-    @JsonProperty("maxHR")
-    private Double maxHR;
 
     @JsonProperty("hrTimeInZone_1")
     private Double hrTimeInZone1;
@@ -72,6 +65,9 @@ public class ActivityDto {
     @JsonProperty("trainingEffectLabel")
     private String trainingEffectLabel;
 
+    @JsonProperty("effortLabel")
+    private String effortLabel;
+
     @JsonProperty("activityTrainingLoad")
     private Double activityTrainingLoad;
 
@@ -81,12 +77,12 @@ public class ActivityDto {
     @JsonProperty("maxRunningCadenceInStepsPerMinute")
     private Double maxRunningCadenceInStepsPerMinute;
 
-    @JsonProperty("avgStrideLength")
-    private Double avgStrideLength;
+    @JsonProperty("averageStrideLength")
+    private Double averageStrideLength;
 
     @JsonProperty("steps")
     private Integer steps;
 
-    @JsonProperty("pr")
-    private Boolean pr;
+    @JsonProperty("isPersonalBest")
+    private Boolean isPersonalBest;
 }
