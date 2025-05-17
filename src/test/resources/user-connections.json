@@ -1,0 +1,51 @@
+{
+  "fullName": "Nikos",
+  "userConnections": [
+    {
+      "userId": 44444444,
+      "displayName": "ead7e166-4d6a-4184-b8fa-e67acdfad458",
+      "fullName": "John Doe",
+      "location": "Athens",
+      "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/ead7e166-4d6a-4184-b8fa-e67acdfad458-prof.png",
+      "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/ead7e166-4d6a-4184-b8fa-e67acdfad458-prfr.png",
+      "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/ead7e166-4d6a-4184-b8fa-e67acdfad458-prth.png",
+      "hasPremiumSocialIcon": false,
+      "userLevel": 5,
+      "connectionRequestId": 555555555,
+      "connectionRequestorId": 666666666,
+      "userConnectionStatus": 2,
+      "userRoles": null,
+      "userPro": false,
+      "profileVisibility": 4,
+      "deviceInvitations": [],
+      "nameApproved": true,
+      "badgeVisibility": 1,
+      "wheelchairModeEnabled": null
+    },
+    {
+      "userId": 6666666666,
+      "displayName": "d87fd3f9-f385-40d1-8f3c-a1f4ba3c0ebd",
+      "fullName": "Jane Doe",
+      "location": "Athens, Center",
+      "profileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/d87fd3f9-f385-40d1-8f3c-a1f4ba3c0ebd.png",
+      "profileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/d87fd3f9-f385-40d1-8f3c-a1f4ba3c0ebd.png",
+      "profileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/d87fd3f9-f385-40d1-8f3c-a1f4ba3c0ebd.png",
+      "hasPremiumSocialIcon": false,
+      "userLevel": 6,
+      "connectionRequestId": 222222222,
+      "connectionRequestorId": 3333333,
+      "userConnectionStatus": 2,
+      "userRoles": null,
+      "userPro": false,
+      "profileVisibility": 4,
+      "deviceInvitations": [],
+      "nameApproved": true,
+      "badgeVisibility": 1,
+      "wheelchairModeEnabled": null
+    }
+  ],
+  "pagination": {
+    "start": 1,
+    "limit": 12
+  }
+}
